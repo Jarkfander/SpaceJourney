@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
     
-public class GameManager : MonoBehaviour
+public class Universe : MonoBehaviour
 {
 
-	//static reference to our gameManager instance, can be read by everyone with
-	private static GameManager instance;
+	//static reference to our universe instance, can be read by everyone with
+	private static Universe instance;
 
 	void Awake()
 	{
 		/*
 			This code is to set the game manager as a persistant singleton:
-				- We check for the existence of a different gameManager
-				- If there is, then we are a second gameManager and selfdestroy
+				- We check for the existence of a different universe
+				- If there is, then we are a second universe and selfdestroy
 				- We set ourselves in dontDestroyOnLoad, so we persist between scenes
 		*/
 		if(instance == null){
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 		/* This is where we initialise all the stuff we need */
 	}
 	
-	public GameManager GetInstance(){
+	public Universe GetInstance(){
 		return instance;
 	}
 
