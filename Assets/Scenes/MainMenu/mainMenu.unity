@@ -206,7 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b9319923b31d840b075b8c697ff696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinMaxValues: {x: -40, y: 40}
+  MinMaxValuesX: {x: 20, y: 30}
+  MinMaxValuesY: {x: 20, y: 30}
+  MinMaxValuesZ: {x: 20, y: 30}
   DirectionChangeTimer: 15
   easeAmount: 0.8
 --- !u!1 &463197603

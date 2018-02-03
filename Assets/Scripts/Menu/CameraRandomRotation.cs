@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class CameraRandomRotation : MonoBehaviour {
 
-	[Header("Rotation range")]
+	[Header("Rotation change random ranges")]
 	[SerializeField]
-	private Vector2 MinMaxValues;
+	private Vector2 MinMaxValuesX;
+	[SerializeField]
+	private Vector2 MinMaxValuesY;
+	[SerializeField]
+	private Vector2 MinMaxValuesZ;
 
 	[Header("Rotation speed")]
 	[SerializeField]
@@ -32,11 +36,10 @@ public class CameraRandomRotation : MonoBehaviour {
 	
 	IEnumerator changeTarget(){
 		while(true){
-			Debug.Log("Changed Direction");
 			targetRotation = Quaternion.Euler(
-				transform.localRotation.eulerAngles.x + Random.Range(MinMaxValues.x,MinMaxValues.y),
-				transform.localRotation.eulerAngles.y + Random.Range(MinMaxValues.x,MinMaxValues.y),
-				transform.localRotation.eulerAngles.z + Random.Range(MinMaxValues.x,MinMaxValues.y)
+				transform.localRotation.eulerAngles.x + (Mathf.Sign(Random.Range(-1,1)) * Random.Range(MinMaxValuesX.x,MinMaxValuesX.y)),
+				transform.localRotation.eulerAngles.y + (Mathf.Sign(Random.Range(-1,1)) * Random.Range(MinMaxValuesY.x,MinMaxValuesY.y)),
+				transform.localRotation.eulerAngles.z + (Mathf.Sign(Random.Range(-1,1)) * Random.Range(MinMaxValuesZ.x,MinMaxValuesZ.y))
 			);
 
 			startRotation = transform.localRotation;
@@ -53,12 +56,25 @@ public class CameraRandomRotation : MonoBehaviour {
 	}
 
 	void OnValidate(){
-		if(MinMaxValues.x > 0){
-			MinMaxValues.x = 0;
+		if(MinMaxValuesX.x < 0){
+			MinMaxValuesX.x = 0;
+		}
+		if(MinMaxValuesX.y < MinMaxValuesX.x){
+			MinMaxValuesX.y = MinMaxValuesX.x;
+		}
+		
+		if(MinMaxValuesY.x < 0){
+			MinMaxValuesY.x = 0;
+		}
+		if(MinMaxValuesY.y < MinMaxValuesY.x){
+			MinMaxValuesY.y = MinMaxValuesY.x;
 		}
 
-		if(MinMaxValues.y < 0){
-			MinMaxValues.y = 0;
+		if(MinMaxValuesZ.x < 0){
+			MinMaxValuesZ.x = 0;
+		}
+		if(MinMaxValuesZ.y < MinMaxValuesZ.x){
+			MinMaxValuesZ.y = MinMaxValuesZ.x;
 		}
 
 		easeAmount = Mathf.Clamp01(easeAmount);
