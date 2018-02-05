@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 463197604}
   - component: {fileID: 463197606}
   - component: {fileID: 463197605}
+  - component: {fileID: 463197607}
   m_Layer: 5
   m_Name: PressStartText
   m_TagString: Untagged
@@ -285,6 +286,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463197603}
+--- !u!114 &463197607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463197603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59590134c678b794b8362158d20ea0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFadeInOut: 2
 --- !u!1 &1000932638
 GameObject:
   m_ObjectHideFlags: 0
