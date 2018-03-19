@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
 			playerInput.GetRollValueSquared()*Time.deltaTime*rollSensitivity
 		);
 
-		transform.Translate(transform.forward * velocity * Time.deltaTime);
+
+		transform.Translate(transform.forward * velocity * Time.deltaTime, Space.World);
 	}
 }
