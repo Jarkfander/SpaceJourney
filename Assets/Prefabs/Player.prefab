@@ -183,9 +183,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1f1b4694faebd0940b7634264035da36, type: 3}
-  - {fileID: 2100002, guid: 1f1b4694faebd0940b7634264035da36, type: 3}
-  - {fileID: 2100004, guid: 1f1b4694faebd0940b7634264035da36, type: 3}
+  - {fileID: 2100000, guid: d574f01d472368e4daa11e82cc067314, type: 2}
+  - {fileID: 2100000, guid: d574f01d472368e4daa11e82cc067314, type: 2}
+  - {fileID: 2100000, guid: d574f01d472368e4daa11e82cc067314, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,9 +230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5591d58c9c9546f469d55fc81385b6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollGravity: 3
-  yawGravity: 3
-  pitchGravity: 3
+  rollGravity: 2
+  yawGravity: 2
+  pitchGravity: 2
   invertedVerticalControls: 0
 --- !u!114 &114877550571000514
 MonoBehaviour:
@@ -249,6 +249,7 @@ MonoBehaviour:
   pitchSensitivity: 30
   rollSensitivity: 30
   yawSensitivity: 30
+  bankAngle: 30
 --- !u!124 &124299302686606182
 Behaviour:
   m_ObjectHideFlags: 1

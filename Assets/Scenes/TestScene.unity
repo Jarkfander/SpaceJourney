@@ -167,6 +167,21 @@ Prefab:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d574f01d472368e4daa11e82cc067314, type: 2}
+    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
+        type: 2}
+      propertyPath: rollGravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
+        type: 2}
+      propertyPath: yawGravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
+        type: 2}
+      propertyPath: pitchGravity
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fb3eaa263cca6f40ae061934fe554e7, type: 2}
   m_IsPrefabParent: 0

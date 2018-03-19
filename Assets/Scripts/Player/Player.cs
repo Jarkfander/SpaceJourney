@@ -14,6 +14,9 @@ public class Player : MonoBehaviour {
 	[SerializeField]
 	private float yawSensitivity = 30;
 
+	[SerializeField]
+	private float bankAngle = 30;
+
 	private PlayerInput playerInput = null;
 	private Transform childTransform = null;
 
@@ -38,6 +41,10 @@ public class Player : MonoBehaviour {
 			playerInput.GetYawValueSquared()*Time.deltaTime*yawSensitivity,
 			playerInput.GetRollValueSquared()*Time.deltaTime*rollSensitivity
 		);
+
+		float bankAmount = -Mathf.Lerp(-bankAngle, bankAngle, (playerInput.GetYawValueSquared()+1)/2);
+
+		childTransform.localRotation = Quaternion.Euler(0,0,bankAmount);
 
 
 		transform.Translate(transform.forward * velocity * Time.deltaTime, Space.World);
