@@ -35,9 +35,10 @@ public class PlayerInput : MonoBehaviour {
 			}
 		} else {
 			if(rollValue != 0.0f){
-				if(rollSignLastFrame == Mathf.Sign(rollValue)){
-					rollValue += Time.deltaTime/rollGravity * Mathf.Sign(rollValue) * -1;
-				} else {
+				
+				rollValue += Time.deltaTime/rollGravity * Mathf.Sign(rollValue) * -1;
+
+				if(rollSignLastFrame != Mathf.Sign(rollValue)){
 					rollValue = 0.0f;
 				}
 			}
@@ -55,10 +56,11 @@ public class PlayerInput : MonoBehaviour {
 			}
 		} else {
 			if(yawValue != 0.0f){
-				if(yawSignLastFrame == Mathf.Sign(yawValue)){
-					yawValue += Time.deltaTime/yawGravity * Mathf.Sign(yawValue) * -1;
-					Debug.Log(yawValue);
-				} else {
+				
+				Debug.Log(Mathf.Sign(yawValue) + "  " + yawSignLastFrame);
+				yawValue += Time.deltaTime/yawGravity * Mathf.Sign(yawValue) * -1;
+
+				if(yawSignLastFrame != Mathf.Sign(yawValue)){
 					yawValue = 0.0f;
 				}
 			}
@@ -75,9 +77,10 @@ public class PlayerInput : MonoBehaviour {
 			}
 		} else {
 			if(pitchValue != 0.0f){
-				if(pitchSignLastFrame == Mathf.Sign(pitchValue)){
-					pitchValue += Time.deltaTime/pitchGravity * Mathf.Sign(pitchValue) * -1;
-				} else {
+
+				pitchValue += Time.deltaTime/pitchGravity * Mathf.Sign(pitchValue) * -1;
+
+				if(pitchSignLastFrame != Mathf.Sign(pitchValue)){
 					pitchValue = 0.0f;
 				}
 			}
