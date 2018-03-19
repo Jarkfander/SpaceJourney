@@ -152,25 +152,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114877550571000514, guid: 0fb3eaa263cca6f40ae061934fe554e7,
+    - target: {fileID: 20489790953134106, guid: 0fb3eaa263cca6f40ae061934fe554e7,
         type: 2}
-      propertyPath: bankAngle
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: rollGravity
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: yawGravity
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805409056248688, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: pitchGravity
-      value: 1
+      propertyPath: far clip plane
+      value: 100000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fb3eaa263cca6f40ae061934fe554e7, type: 2}
@@ -268,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232418377}
   - component: {fileID: 1232418376}
+  - component: {fileID: 1232418378}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -324,3 +310,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!123 &1232418378
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232418375}
+  m_Enabled: 1
+  m_Flare: {fileID: 12100000, guid: 1208e43116703174695c72c99f54809a, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 50
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Directional: 1

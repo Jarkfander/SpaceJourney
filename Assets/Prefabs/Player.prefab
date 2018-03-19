@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4563677833469228}
   - component: {fileID: 114877550571000514}
   - component: {fileID: 114805409056248688}
+  - component: {fileID: 64864859080086118}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -212,6 +213,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1399050610836628}
   m_Mesh: {fileID: 4300000, guid: 1f1b4694faebd0940b7634264035da36, type: 3}
+--- !u!64 &64864859080086118
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368239808504006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 1f1b4694faebd0940b7634264035da36, type: 3}
 --- !u!81 &81791953649823838
 AudioListener:
   m_ObjectHideFlags: 1
@@ -230,9 +245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5591d58c9c9546f469d55fc81385b6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollGravity: 2
-  yawGravity: 2
-  pitchGravity: 2
+  rollGravity: 1.5
+  yawGravity: 1.5
+  pitchGravity: 1
   invertedVerticalControls: 0
 --- !u!114 &114877550571000514
 MonoBehaviour:
@@ -249,7 +264,7 @@ MonoBehaviour:
   pitchSensitivity: 30
   rollSensitivity: 30
   yawSensitivity: 30
-  bankAngle: 30
+  bankAngle: 60
 --- !u!124 &124299302686606182
 Behaviour:
   m_ObjectHideFlags: 1
