@@ -12,10 +12,16 @@ ModelImporter:
     2100000: lambert4SG
     2100002: lambert3SG
     2100004: lambert2SG
+    2100006: Lo_poly_Spaceship_05_by_Liz_ReddingtonMat
     2300000: Lo_poly_Spaceship_05_by_Liz_Reddington
     3300000: Lo_poly_Spaceship_05_by_Liz_Reddington
     4300000: Lo_poly_Spaceship_05_by_Liz_Reddington
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lo_poly_Spaceship_05_by_Liz_ReddingtonMat
+    second: {fileID: 2100000, guid: d574f01d472368e4daa11e82cc067314, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
