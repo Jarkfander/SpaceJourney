@@ -262,13 +262,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocities:
   - 0
-  - 250
   - 500
   - 1000
-  - 2000
-  pitchSensitivity: 30
+  - 2500
+  - 5000
+  pitchSensitivity: 50
   rollSensitivity: 50
-  yawSensitivity: 30
+  yawSensitivity: 40
   bankAngle: 60
 --- !u!124 &124299302686606182
 Behaviour:

@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
 		childTransform.localRotation = Quaternion.Euler(0,0,bankAmount);
 
 		//mouvement
-		transform.Translate(transform.forward * velocity * Time.deltaTime, Space.World);
+		transform.Translate(transform.forward * velocities[currentVelocity] * Time.deltaTime, Space.World);
 	}
 
 	void Update(){
