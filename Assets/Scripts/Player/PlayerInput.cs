@@ -27,8 +27,15 @@ public class PlayerInput : MonoBehaviour {
 
 	void Update () {
 		/* ROLL */
-		if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
+		/*if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
 			if(Input.GetAxisRaw("RollLeft") > 0.0f){
+				rollValue += Time.deltaTime/rollGravity;
+			} else {
+				rollValue -= Time.deltaTime/rollGravity;
+			}*/
+
+		if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f){
+			if(Input.GetAxis("Horizontal") < 0.0f){
 				rollValue += Time.deltaTime/rollGravity;
 			} else {
 				rollValue -= Time.deltaTime/rollGravity;
@@ -48,8 +55,14 @@ public class PlayerInput : MonoBehaviour {
 
 
 		/* YAW */
-		if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f){
+		/*if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f){
 			if(Input.GetAxis("Horizontal") < 0.0f){
+				yawValue -= Time.deltaTime/yawGravity;
+			} else {
+				yawValue += Time.deltaTime/yawGravity;
+			}*/
+		if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
+			if(Input.GetAxisRaw("RollLeft") > 0.0f){
 				yawValue -= Time.deltaTime/yawGravity;
 			} else {
 				yawValue += Time.deltaTime/yawGravity;
