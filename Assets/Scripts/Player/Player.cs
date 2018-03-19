@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	[SerializeField]
-	private float velocity = 250.0f;
+	private float[] velocities = {250};
 	[SerializeField]
 	private float pitchSensitivity = 30;
 	[SerializeField]
@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
 
 	private PlayerInput playerInput = null;
 	private Transform childTransform = null;
+	private int currentVelocity = 0;
+	private float velocity;
 
 	void Start () {
 		playerInput = GetComponent<PlayerInput>();
@@ -46,7 +48,19 @@ public class Player : MonoBehaviour {
 
 		childTransform.localRotation = Quaternion.Euler(0,0,bankAmount);
 
-
+		//mouvement
 		transform.Translate(transform.forward * velocity * Time.deltaTime, Space.World);
+	}
+
+	void Update(){
+		if(playerInput.GetAccelerate()){
+			currentVelocity++;
+		}
+
+		if(playerInput.GetDescelerate()){
+			currentVelocity--;
+		}
+		
+		currentVelocity = Mathf.Clamp(currentVelocity, 0, velocities.Length-1);
 	}
 }

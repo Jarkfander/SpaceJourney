@@ -85,13 +85,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633551314570310}
-  m_LocalRotation: {x: 0.061431378, y: -0, z: -0, w: 0.9981113}
-  m_LocalPosition: {x: 0, y: 433, z: -1275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 350, z: -1275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4563677833469228}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 7.044, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4313955339518668
 Transform:
   m_ObjectHideFlags: 1
@@ -151,7 +151,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000000
+  far clip plane: 100000
   field of view: 50.30964
   orthographic: 0
   orthographic size: 5
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5591d58c9c9546f469d55fc81385b6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollGravity: 1.5
+  rollGravity: 1
   yawGravity: 1.5
   pitchGravity: 1
   invertedVerticalControls: 0
@@ -260,9 +260,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f63a35236b0c84f9431a7256f8db63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1000
+  velocities:
+  - 0
+  - 250
+  - 500
+  - 1000
+  - 2000
   pitchSensitivity: 30
-  rollSensitivity: 30
+  rollSensitivity: 50
   yawSensitivity: 30
   bankAngle: 60
 --- !u!124 &124299302686606182

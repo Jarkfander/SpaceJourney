@@ -25,6 +25,10 @@ public class PlayerInput : MonoBehaviour {
 	private float pitchValue = 0.0f;
 	private float pitchSignLastFrame = 0.0f;
 
+	//valeurs des bouton d'acceleration
+	private bool accelerate = false;
+	private bool descelerate = false;
+
 	void Update () {
 		/* ROLL */
 		/*if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
@@ -32,7 +36,9 @@ public class PlayerInput : MonoBehaviour {
 				rollValue += Time.deltaTime/rollGravity;
 			} else {
 				rollValue -= Time.deltaTime/rollGravity;
-			}*/
+			}
+		} else ...
+		*/
 
 		if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f){
 			if(Input.GetAxis("Horizontal") < 0.0f){
@@ -60,7 +66,10 @@ public class PlayerInput : MonoBehaviour {
 				yawValue -= Time.deltaTime/yawGravity;
 			} else {
 				yawValue += Time.deltaTime/yawGravity;
-			}*/
+			}
+		} else ...
+		*/
+
 		if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
 			if(Input.GetAxisRaw("RollLeft") > 0.0f){
 				yawValue -= Time.deltaTime/yawGravity;
@@ -101,6 +110,17 @@ public class PlayerInput : MonoBehaviour {
 		pitchValue = Mathf.Clamp(pitchValue, -1, 1);
 		pitchSignLastFrame = Mathf.Sign(pitchValue);
 
+		if(Input.GetKeyDown("joystick button 0")){
+			accelerate = true;
+		} else {
+			accelerate = false;
+		}
+
+		if(Input.GetKeyDown("joystick button 1")){
+			descelerate = true;
+		} else {
+			descelerate = false;
+		}
 	}
 
 	public float GetRollValue(){
@@ -125,5 +145,13 @@ public class PlayerInput : MonoBehaviour {
 
 	public float GetPitchValueSquared(){
 		return pitchValue*Mathf.Abs(pitchValue);
+	}
+
+	public bool GetAccelerate(){
+		return accelerate;
+	}
+
+	public bool GetDescelerate(){
+		return descelerate;
 	}
 }
