@@ -37,12 +37,12 @@ public class Player : MonoBehaviour {
 	void FixedUpdate () {
 		
 		transform.Rotate(
-			playerInput.GetPitchValueSquared()*Time.deltaTime*pitchSensitivity,
-			playerInput.GetYawValueSquared()*Time.deltaTime*yawSensitivity,
-			playerInput.GetRollValueSquared()*Time.deltaTime*rollSensitivity
+			playerInput.GetPitchValue()*Time.deltaTime*pitchSensitivity,
+			playerInput.GetYawValue()*Time.deltaTime*yawSensitivity,
+			playerInput.GetRollValue()*Time.deltaTime*rollSensitivity
 		);
 
-		float bankAmount = -Mathf.Lerp(-bankAngle, bankAngle, (playerInput.GetYawValueSquared()+1)/2);
+		float bankAmount = -Mathf.Lerp(-bankAngle, bankAngle, (playerInput.GetYawValue()+1)/2);
 
 		childTransform.localRotation = Quaternion.Euler(0,0,bankAmount);
 
