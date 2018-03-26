@@ -6,13 +6,13 @@ Flare:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: sun
-  m_FlareTexture: {fileID: 2800000, guid: d192ab82551f0b24dbc16850625c1713, type: 3}
+  m_FlareTexture: {fileID: 2800000, guid: 24edb77ccb25ab64e978e33de97fe4dd, type: 3}
   m_TextureLayout: 2
   m_Elements:
   - m_ImageIndex: 0
     m_Position: 0
-    m_Size: 10
-    m_Color: {r: 1, g: 1, b: 1, a: 0}
+    m_Size: 20
+    m_Color: {r: 0.77205884, g: 0.9717039, b: 1, a: 0}
     m_UseLightColor: 1
     m_Rotate: 0
     m_Zoom: 1

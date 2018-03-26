@@ -152,21 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114877550571000514, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: pitchSensitivity
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114877550571000514, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: rollSensitivity
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114877550571000514, guid: 0fb3eaa263cca6f40ae061934fe554e7,
-        type: 2}
-      propertyPath: bankAngle
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fb3eaa263cca6f40ae061934fe554e7, type: 2}
   m_IsPrefabParent: 0
@@ -330,7 +315,7 @@ LensFlare:
   m_Flare: {fileID: 12100000, guid: 1208e43116703174695c72c99f54809a, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Brightness: 1
-  m_FadeSpeed: 50
+  m_FadeSpeed: 30
   m_IgnoreLayers:
     serializedVersion: 2
     m_Bits: 0
