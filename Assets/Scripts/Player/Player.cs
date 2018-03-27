@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
 			playerInput.GetYawValue()*Time.deltaTime*yawSensitivity,
 			playerInput.GetRollValue()*Time.deltaTime*rollSensitivity
 		);
-
+	}
 		float bankAmount = -Mathf.Lerp(-bankAngle, bankAngle, (playerInput.GetYawValue()+1)/2);
 
 		childTransform.localRotation = Quaternion.Euler(0,0,bankAmount);
