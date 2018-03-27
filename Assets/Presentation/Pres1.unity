@@ -203,22 +203,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 102894763377172798, guid: 5fa8b6052045b3f4db3e28ef4a8f3850,
-        type: 2}
-      propertyPath: m_Text
-      value: Plan
-      objectReference: {fileID: 0}
-    - target: {fileID: 102810951625200518, guid: 5fa8b6052045b3f4db3e28ef4a8f3850,
-        type: 2}
-      propertyPath: m_Text
-      value: "<b>Introduction</b>\n\tSujet\n\tUnity\n\tPitch du jeu\n\n<b>Demonstration</b>\n\n<b>Focus</b>\n\tLe
-        player controller\n\n<b>Conclusion</b>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 102810951625200518, guid: 5fa8b6052045b3f4db3e28ef4a8f3850,
-        type: 2}
-      propertyPath: m_CharacterSize
-      value: 2.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fa8b6052045b3f4db3e28ef4a8f3850, type: 2}
   m_IsPrefabParent: 0
