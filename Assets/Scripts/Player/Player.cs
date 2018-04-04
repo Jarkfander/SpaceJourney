@@ -25,13 +25,13 @@ public class Player : MonoBehaviour {
 	void Start () {
 		playerInput = GetComponent<PlayerInput>();
 		if(playerInput == null){
-			Debug.Log("Something went wrong: PlayerInput not found.");
+			//Debug.Log("Something went wrong: PlayerInput not found.");
 			Destroy(this);
 		}
 
 		childTransform = transform.GetChild(0);
 		if(childTransform == null){
-			Debug.Log("Something went wrong: could not find first child in player.");
+			//Debug.Log("Something went wrong: could not find first child in player.");
 			Destroy(this);
 		}
 	}
@@ -53,7 +53,12 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update(){
-		if(playerInput.GetAccelerate()){
+        if (childTransform == null)
+        {
+            Debug.Log("Something went wrong: could not find first child in player.");
+            Destroy(this);
+        }
+        if (playerInput.GetAccelerate()){
 			currentVelocity++;
 		}
 

@@ -79,7 +79,7 @@ public class PlayerInput : MonoBehaviour {
 		} else {
 			if(yawValue != 0.0f){
 				
-				Debug.Log(Mathf.Sign(yawValue) + "  " + yawSignLastFrame);
+				//Debug.Log(Mathf.Sign(yawValue) + "  " + yawSignLastFrame);
 				yawValue += Time.deltaTime/yawGravity * Mathf.Sign(yawValue) * -1;
 
 				if(yawSignLastFrame != Mathf.Sign(yawValue)){
@@ -110,13 +110,15 @@ public class PlayerInput : MonoBehaviour {
 		pitchValue = Mathf.Clamp(pitchValue, -1, 1);
 		pitchSignLastFrame = Mathf.Sign(pitchValue);
 
-		if(Input.GetKeyDown("joystick button 0")){
+		if(Input.GetKeyDown("joystick button 0")|| Input.GetKeyDown("x"))
+        {
 			accelerate = true;
 		} else {
 			accelerate = false;
 		}
 
-		if(Input.GetKeyDown("joystick button 1")){
+		if(Input.GetKeyDown("joystick button 1") || Input.GetKeyDown("c"))
+        {
 			descelerate = true;
 		} else {
 			descelerate = false;
