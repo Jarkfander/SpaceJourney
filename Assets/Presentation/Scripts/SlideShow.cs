@@ -31,7 +31,7 @@ public class SlideShow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey(KeyCode.V)){
+		if(Input.GetKey("joystick button 7")){
 			SceneManager.LoadScene(nextScene);
 		}
 
