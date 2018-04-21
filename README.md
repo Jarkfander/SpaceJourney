@@ -4,7 +4,7 @@ A space journey is a singleplayer space exploration game made by three french st
 
 ## Getting Started
 
-Simply clone the project on your machine and open it using 2017.3.0f3 or later. We do not recommend using an other version than Unity 2017.3.0f3 as this may cause bugs and/or lacking features.
+Simply clone the project on your machine and open it using Unity 2017.3.0f3 or later. We do not recommend using an other version than Unity 2017.3.0f3 as this may cause bugs and/or lacking features.
 
 ## Authors
 
