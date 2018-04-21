@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 114000011651743184}
   - component: {fileID: 111000011087569900}
   - component: {fileID: 82000010093622170}
+  - component: {fileID: 114215873509123934}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: ExplosionLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,22 +63,6 @@ GameObject:
   - component: {fileID: 26000010687708352}
   m_Layer: 0
   m_Name: Sparks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000011869266182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4000011834751144}
-  - component: {fileID: 114000012645646364}
-  m_Layer: 0
-  m_Name: Physical explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,28 +105,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010608846784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.09, y: -8.91, z: -9.61}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_Children:
   - {fileID: 4000013438758862}
   - {fileID: 4000014227223174}
   - {fileID: 4000010874358010}
-  - {fileID: 4000011834751144}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4000011834751144
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011869266182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4000011196859318}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013438758862
 Transform:
@@ -567,16 +538,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loopduration: 1
---- !u!114 &114000012645646364
+--- !u!114 &114215873509123934
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011869266182}
+  m_GameObject: {fileID: 1000010608846784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774c6fe16d827fe4685d1a5d46eb00cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fd7f22a431853d4e88fdc4c958046d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 2
-  Force: 50
+  lifetime: 2

@@ -29,6 +29,9 @@ public class PlayerInput : MonoBehaviour {
 	private bool accelerate = false;
 	private bool descelerate = false;
 
+	//Tir
+	private bool isFiring = false;
+
 	void Update () {
 		/* ROLL */
 		/*if((Input.GetAxisRaw("RollLeft") > 0.0f) ^ (Input.GetAxisRaw("RollRight") > 0.0f)){
@@ -123,6 +126,13 @@ public class PlayerInput : MonoBehaviour {
 		} else {
 			descelerate = false;
 		}
+
+		
+		if(Input.GetButton("Fire1")){
+			isFiring = true;
+		} else {
+			isFiring = false;
+		}
 	}
 
 	public float GetRollValue(){
@@ -155,5 +165,9 @@ public class PlayerInput : MonoBehaviour {
 
 	public bool GetDescelerate(){
 		return descelerate;
+	}
+
+	public bool IsFiring(){
+		return isFiring;
 	}
 }

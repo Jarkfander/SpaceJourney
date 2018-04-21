@@ -3,61 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyAsteroid : MonoBehaviour
-{
-    public GameObject Shard;
-    public GameObject Boum;
-    public Vector3 location;
-    public Vector3 velocity;
+{   
+    [SerializeField]
+    private GameObject[] shards;
+    [SerializeField]
+    private GameObject explosion;
+    [SerializeField]
+    private int numberOfShards = 10;
+    [SerializeField]
+    private float shardsVelocity = 1000.0f;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        location = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        GameObject Badoum = Instantiate(Boum, location, Quaternion.identity) as GameObject;
+        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Shot")){
+            Instantiate(explosion, transform.position, Quaternion.identity);
 
-        location = new Vector3(transform.position.x,transform.position.y+900,transform.position.z);
-        GameObject plop1 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100,100,100);
+            for(int i = 0; i < numberOfShards; i++){
+                Vector3 direction = new Vector3(Random.Range(-1.0f,1.0f), Random.Range(-1.0f,1.0f), Random.Range(-1.0f,1.0f));
+                direction = direction.normalized;
+                GameObject shard = Instantiate(shards[Random.Range(0, shards.Length)], transform.position + direction*50, Quaternion.identity);
+                shard.GetComponent<Rigidbody>().velocity = direction*shardsVelocity;
+            }
 
-        location = new Vector3(transform.position.x+300, transform.position.y+300, transform.position.z+300);
-        GameObject plop2 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x + 300, transform.position.y + 300, transform.position.z-300);
-        GameObject plop7 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x-300, transform.position.y + 300, transform.position.z+300);
-        GameObject plop5 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x - 300, transform.position.y + 300, transform.position.z-300);
-        GameObject plop8 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x+300, transform.position.y-300, transform.position.z);
-        GameObject plop3 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-
-        location = new Vector3(transform.position.x + 300, transform.position.y - 300, transform.position.z+300);
-        GameObject plop9 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x-300, transform.position.y - 300, transform.position.z);
-        GameObject plop6 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x - 300, transform.position.y - 300, transform.position.z-300);
-        GameObject plop10    = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().angularVelocity = new Vector3(100, 100, 100);
-
-        location = new Vector3(transform.position.x,transform.position.y-900,transform.position.z);
-        GameObject plop4 = Instantiate(Shard, location, Quaternion.identity) as GameObject;
-        plop1.GetComponent<Rigidbody>().velocity = new Vector3(1,1,1);
-        
-
-        Destroy(gameObject);
-        Debug.Log(message: "bit");
-        //Destroy(obj: other.gameObject.GetComponent<Transform>().GetChild(0).gameObject);
+            Destroy(gameObject);
+        }
     }
 }
