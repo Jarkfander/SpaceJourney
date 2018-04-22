@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005253651151486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -800, y: -100, z: 1000}
+  m_LocalPosition: {x: -800, y: -120, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4064014439123878}
@@ -206,8 +206,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005253651151486}
-  m_Text: "<b>Introduction</b>\n\tSujet\n\tUnity\n\tPitch du jeu\n\n<b>Demonstration</b>\n\n<b>Focus</b>\n\tLe
-    player controller\n\n<b>Conclusion</b>"
+  m_Text: "<b>Introduction</b>\n\tUnity\n\tObjectif\n\n<b>D\xE9monstration</b>\n\n<b>Features
+    principales</b>\n\tLe player controller\n\tLa destruction\n\tLa g\xE9n\xE9ration
+    proc\xE9durale\n\n<b>Conclusion</b>\n\tBilan\n"
   m_OffsetZ: 0
   m_CharacterSize: 2.5
   m_LineSpacing: 1
