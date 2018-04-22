@@ -173,7 +173,12 @@ MonoBehaviour:
     SmallIcon: {fileID: 2800000, guid: 163b4b589845fee47ac105cdfb911b77, type: 3}
     LargeIcon: {fileID: 2800000, guid: 87a78956e37a460439f1871712ce87fc, type: 3}
   - Type: 1
-    Key: Assets/Frameworks
+    Key: Assets/Presentation
     IsRecursive: 0
-    SmallIcon: {fileID: 2800000, guid: 0a498e8f7fbcbef4db91d2d411e3f70f, type: 3}
-    LargeIcon: {fileID: 2800000, guid: b88339035f924f94eab1e64bac79149f, type: 3}
+    SmallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+  - Type: 1
+    Key: Assets/Presentation/Slides
+    IsRecursive: 0
+    SmallIcon: {fileID: 2800000, guid: 483d693b3f9d5704b89409016b40bc74, type: 3}
+    LargeIcon: {fileID: 2800000, guid: fac7470563f79024ebc244b39080448d, type: 3}
