@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Presentation/Pres1.unity
     guid: ccb1e1d6c2faa7a46acbe454f3cc2b1b
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/Game.unity
     guid: da7ea2e2affbd544bade05c77c25cd75
   - enabled: 1
     path: Assets/Scenes/Planets/Namek.unity
     guid: 28e3fe71eccb6b043972c02b492a1686
+  - enabled: 1
+    path: Assets/Presentation/Pres2.unity
+    guid: db099fdb9706662469b234de16248fda
