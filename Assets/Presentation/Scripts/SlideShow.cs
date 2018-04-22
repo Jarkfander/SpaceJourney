@@ -31,10 +31,6 @@ public class SlideShow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey("joystick button 7")){
-			SceneManager.LoadScene(nextScene);
-		}
-
 		if(Input.GetButtonDown("Submit")){
 			currentSlide++;
 			currentSlide = Mathf.Clamp(currentSlide, 0, slides.Length-1);
@@ -43,8 +39,6 @@ public class SlideShow : MonoBehaviour {
 			rotStart = transform.rotation;
 			rotTarget = slides[currentSlide].rotation;
 			transitionPercentage = 0;
-
-			Debug.Log("START transitionPercentage = " + transitionPercentage);
 		}
 		
 

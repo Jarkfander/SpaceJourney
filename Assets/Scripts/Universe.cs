@@ -7,6 +7,11 @@ public class Universe : MonoBehaviour
 
 	//static reference to our universe instance, can be read by everyone with
 	private static Universe universeInstance;
+	public Vector3 playerStartPosition;
+	
+	[SerializeField]
+	private string[] sceneOrder;
+	private int currentScene = 0;
 
 	void Awake()
 	{
@@ -23,6 +28,19 @@ public class Universe : MonoBehaviour
 		}
 		DontDestroyOnLoad(gameObject);
 	}
+
+	void Update(){
+		if(Input.GetKey("joystick button 7") || Input.GetKey(KeyCode.N)){
+			SceneManager.LoadScene(sceneOrder[Mathf.Clamp(currentScene+1, 0, sceneOrder.Length-1)]);
+			currentScene++;
+			currentScene = Mathf.Clamp(currentScene, 0, sceneOrder.Length);
+		}
+		if(Input.GetKey("joystick button 6") || Input.GetKey(KeyCode.B)){
+			SceneManager.LoadScene(sceneOrder[Mathf.Clamp(currentScene-1, 0, sceneOrder.Length-1)]);
+			currentScene--;
+			currentScene = Mathf.Clamp(currentScene, 0, sceneOrder.Length);
+		}
+	}
 	
 	public static Universe GetInstance(){
 		return universeInstance;
@@ -35,5 +53,10 @@ public class Universe : MonoBehaviour
 	IEnumerator PlayerDeathSequence(){
 		yield return new WaitForSeconds(5.0f);
 		SceneManager.LoadScene("mainMenu");
+	}
+
+	public void SetScene(string sceneName, Vector3 playerPosition){
+		SceneManager.LoadScene(sceneName);
+		playerStartPosition = playerPosition;
 	}
 }

@@ -68,6 +68,7 @@ public class Player : MonoBehaviour {
 
 
 	void Start () {
+		this.transform.position = Universe.GetInstance().playerStartPosition;
 		playerInput = GetComponent<PlayerInput>();
 		if(playerInput == null){
 			//Debug.Log("Something went wrong: PlayerInput not found.");

@@ -21,7 +21,6 @@ public class Laser : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
-		Debug.Log("AH");
 		Destroy(this.gameObject);
 	}
 }
