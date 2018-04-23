@@ -9,8 +9,6 @@ public class SlideShow : MonoBehaviour {
 	private Transform[] slides;
 	[SerializeField]
 	private float transitionDuration;
-	[SerializeField]
-	private string nextScene;
 	
 	private int currentSlide = 0;
 
