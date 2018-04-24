@@ -127,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1243397180524232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4271, y: -3980, z: -2131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4867446377531152}
@@ -299,7 +299,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552939327845836}
-  m_Text: "<b>Joueur aux commande d'un vaisseau</b>\n\n<b>Exploration</b>\n\t\u2022
+  m_Text: "<b>Joueur aux commandes d'un vaisseau</b>\n\n<b>Exploration</b>\n\t\u2022
     D\xE9placements\n\t\u2022 Environnements\n<b>Combat</b>\n\t\u2022 tir\n\t\u2022
     destruction"
   m_OffsetZ: 0
