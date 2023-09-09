@@ -10,7 +10,6 @@ Simply clone the project on your machine and open it using Unity 2017.3.0f3 or l
 
 * **Florent DUPONT** - [Jarkfander](https://github.com/Jarkfander)
 * **Ishak LOUCIF** - [PraiseTheSun11](https://github.com/PraiseTheSun11)
-* **Sami CHEMINAL** - [sam1905](https://github.com/sam1905)
 
 See the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
